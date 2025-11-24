@@ -1,7 +1,7 @@
 import React from 'react'
 import cta from '../assets/cta5.jpg';
 
-function HeroCTA() {
+function HeroCTA({ setShowAuth, setTab }) {
   return (
         <section
       id="cta"
@@ -31,13 +31,14 @@ function HeroCTA() {
         </p>
 
         {/* Button */}
-        <button
-          className="cursor-pointer px-10 py-4 bg-white text-blue-700 font-semibold rounded-2xl shadow-lg hover:bg-gray-200 transition-all duration-300"
+            <button
           onClick={() => {
-            document.getElementById("hero").scrollIntoView({ behavior: "smooth" });
+            setShowAuth(true);
+            setTab("signup");
           }}
+          className="mt-4 px-6 sm:px-8 py-2 sm:py-3 bg-blue-700 text-white font-medium rounded-lg hover:bg-blue-900 transition-all w-fit"
         >
-          Get Started — It’s Free
+          Get Started - It's Free
         </button>
 
       </div>

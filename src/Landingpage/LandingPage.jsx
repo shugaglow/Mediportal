@@ -32,7 +32,8 @@ export default function LandingPage() {
       <Features />
       <HowItWorks />
       <Testimonials />
-      <HeroCTA/>
+      <HeroCTA setShowAuth={setShowAuth} setTab={setTab} />
+
       <Footer />
 
       {/* Login/Signup Modal */}
