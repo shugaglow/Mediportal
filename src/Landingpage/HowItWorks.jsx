@@ -34,7 +34,7 @@ export default function HowItWorks() {
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-black/50" />
 
       {/* Content */}
       <div className="relative max-w-6xl mx-auto px-6">
