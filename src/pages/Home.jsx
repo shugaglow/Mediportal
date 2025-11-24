@@ -34,8 +34,8 @@ export default function Home() {
     <section className="min-h-screen w-full">
       <div className=" w-full">
 
-        <div>
-          <h1 className="text-xl font-bold text-blue-900 mt-16">Appointments</h1>
+        <div className="pl-4">
+          <h1 className="text-xl font-bold text-blue-900 mt-16 lg:mt-8">Appointments</h1>
             <p className=' text-gray-600 mb-4'>Your centralized hub for managing all your medical needs efficiently and effectively</p>
         </div>
         

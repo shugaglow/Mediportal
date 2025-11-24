@@ -59,9 +59,9 @@ export default function HealthTips() {
       : tips.filter((tip) => tip.category === selectedCategory);
 
   return (
-    <div className="w-full">
+    <div className="w-full pl-4">
       {/* Header */}
-      <h1 className="text-xl font-bold text-blue-900 lg:mt-0 mt-16">Health Tips</h1>
+      <h1 className="text-xl font-bold text-blue-900 lg:mt-8 mt-16">Health Tips</h1>
       <p className="text-gray-600 mt-1">
         Simple daily habits to help you stay healthy, energized, and balanced.
       </p>

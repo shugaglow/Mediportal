@@ -18,7 +18,7 @@ function AppointmentLayout() {
       <div className="p-4 w-full md:mt-0">
 
          <div>
-            <h2 className='text-xl font-bold text-blue-900 mt-16'>Appointments</h2>
+            <h2 className='text-xl font-bold text-blue-900 mt-16 lg:mt-0'>Appointments</h2>
             <p className=' text-gray-600 mb-4'>Book your next appointment in just a few clicks.</p>
         </div>
       </div>

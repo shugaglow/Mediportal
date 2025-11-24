@@ -7,12 +7,12 @@ function Prescriptions() {
     <div className='w-full'>
 
       
-      <div>
-            <h2 className='text-xl font-bold text-blue-900 mt-16'>Prescription Cards</h2>
+      <div className='pl-4'>
+            <h2 className='text-xl font-bold text-blue-900 mt-16 lg:mt-8'>Prescription Cards</h2>
             <p className=' text-gray-600 mb-6'>Keep track of all your medications, so you never miss a dose.</p>
         </div>
 
-      <div className='mt-8 grid grid-col-1 md:grid-cols-2 gap-4 w-full'>
+      <div className='mt-8 p-4 grid grid-col-1 md:grid-cols-2 gap-4 w-full'>
         <PrescriptionCard
             status="active"
             medication="Lisinopril"

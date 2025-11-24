@@ -4,7 +4,7 @@ import TopComponent from '../../components/TopComponent'
 
 function Allergies() {
   return (
-    <div className='bg-white p-4 rounded-md'>
+    <div className='pl-4'>
 
          <div className=''>
 

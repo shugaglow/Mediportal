@@ -45,10 +45,10 @@ export default function Notifications() {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full pl-4">
       {/* Header */}
       <div>
-        <h1 className="text-xl flex  justify-start items-center gap-2 font-bold text-blue-900 lg:mt-0 mt-16">
+        <h1 className="text-xl flex  justify-start items-center gap-2 font-bold text-blue-900 lg:mt-8 mt-16">
           Notifications
         </h1>
         <p className="text-gray-600 mt-2">

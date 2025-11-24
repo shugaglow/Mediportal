@@ -4,9 +4,9 @@ import Invoice from "../components/Invoice";
 
 export default function Billings() {
   return (
-    <div className="w-full">
+    <div className="w-full pl-4">
       {/* Header */}
-      <h1 className="text-xl font-bold text-blue-900 lg:mt-0 mt-16">Billing & Payments</h1>
+      <h1 className="text-xl font-bold text-blue-900 lg:mt-8 mt-16">Billing & Payments</h1>
       <p className="text-gray-600 mb-6">
         Manage your payments, view invoices, and update your billing details.
       </p>

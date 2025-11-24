@@ -4,16 +4,16 @@ import TopComponent from '../../components/TopComponent'
 
 function LabResults() {
   return (
-    <div className='bg-white rounded-md'>
+    <div className=' pl-4'>
 
         <div className=''>
 
-          <div className='p-4'>
+          <div className=''>
             <h2 className='text-lg md:text-xl font-semibold'>Lab Results</h2>
             <p className='text-sm md:text-lg text-gray-600 mb-2'>Quickly review your laboratory test outcomes, check normal ranges, and download reports for future reference or doctor consultations.</p>
         </div>
         </div>
-        <div className='grid grid-cols-1 lg:grid-cols-2 p-4 gap-4'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
             <LabResultCard
             testName="Complete Blood Count (CBC)"
             date="May 1, 2025"

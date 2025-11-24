@@ -8,7 +8,7 @@ function Layout() {
        <div className='flex lg:w-[24%]'>
          <NavBar/>
        </div>
-        <main className='flex p-4 w-full lg:w-[76%] bg-gray-100'>
+        <main className='flex w-full bg-gray-100'>
           <Outlet/>
         </main>
     </div>
