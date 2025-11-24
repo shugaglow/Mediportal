@@ -1,8 +1,6 @@
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 function AppointmentLayout() {
-  const { pathname } = useLocation();
-
   const tabs = [
     { label: "Book Appointment", path: "" }, // index route
     { label: "Upcoming", path: "upcoming" },
@@ -17,35 +15,33 @@ function AppointmentLayout() {
       <p className="text-gray-600 mb-4">Book your next appointment in just a few clicks.</p>
 
       <div className="overflow-x-auto scrollbar-hide flex gap-4 border-b border-gray-200 px-2">
-        {tabs.map((tab) => {
-          const isActive =
-            (tab.path === "" && pathname.endsWith("appointments")) ||
-            pathname.endsWith(tab.path);
-
-          return (
-            <Link
-              key={tab.path}
-              to={tab.path} // relative path
-              className={`px-4 text-nowrap py-2 font-medium ${
+        {tabs.map((tab) => (
+          <NavLink
+            key={tab.path}
+            to={tab.path} // relative path
+            end={tab.path === ""} // index route should match exactly
+            className={({ isActive }) =>
+              `px-4 text-nowrap py-2 font-medium ${
                 isActive
                   ? "text-blue-700 border-b-2 border-blue-700"
                   : "text-gray-600 hover:text-gray-800"
-              }`}
-            >
-              {tab.label}
-            </Link>
-          );
-        })}
+              }`
+            }
+          >
+            {tab.label}
+          </NavLink>
+        ))}
       </div>
 
       <div className="mt-6">
-        <Outlet /> 
+        <Outlet />
       </div>
     </div>
   );
 }
 
 export default AppointmentLayout;
+
 
 
 
