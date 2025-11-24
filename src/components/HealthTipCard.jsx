@@ -5,7 +5,7 @@ export default function HealthTipCard({ title, description, icon }) {
 
       <div>
         <h3 className="font-semibold text-gray-900 text-lg">{title}</h3>
-        <p classname="text-gray-600 text-sm mt-1">{description}</p>
+        <p className="text-gray-600 text-sm mt-1">{description}</p>
       </div>
     </div>
   );

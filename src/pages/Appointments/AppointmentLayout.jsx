@@ -4,59 +4,48 @@ function AppointmentLayout() {
   const { pathname } = useLocation();
 
   const tabs = [
-    { label: "Book Appointment", path: "/appointments" },
-    { label: "Upcoming", path: "/appointments/upcoming" },
-    { label: "Confirmed", path: "/appointments/confirmed" },
-    { label: "Cancelled", path: "/appointments/cancelled" },
-    { label: "Past", path: "/appointments/past" },
+    { label: "Book Appointment", path: "" }, // index route
+    { label: "Upcoming", path: "upcoming" },
+    { label: "Confirmed", path: "confirmed" },
+    { label: "Cancelled", path: "cancelled" },
+    { label: "Past", path: "past" },
   ];
 
   return (
     <div className="w-full px-4">
+      <h2 className="text-xl font-bold text-blue-900 mt-24 lg:mt-8">Appointments</h2>
+      <p className="text-gray-600 mb-4">Book your next appointment in just a few clicks.</p>
 
-      {/* 🔹 Header */}
-      <div className="w-full">
+      <div className="overflow-x-auto scrollbar-hide flex gap-4 border-b border-gray-200 px-2">
+        {tabs.map((tab) => {
+          const isActive =
+            (tab.path === "" && pathname.endsWith("appointments")) ||
+            pathname.endsWith(tab.path);
 
-         <div>
-            <h2 className='text-xl font-bold text-blue-900 mt-24 lg:mt-8'>Appointments</h2>
-            <p className=' text-gray-600 mb-4'>Book your next appointment in just a few clicks.</p>
-        </div>
+          return (
+            <Link
+              key={tab.path}
+              to={tab.path} // relative path
+              className={`px-4 text-nowrap py-2 font-medium ${
+                isActive
+                  ? "text-blue-700 border-b-2 border-blue-700"
+                  : "text-gray-600 hover:text-gray-800"
+              }`}
+            >
+              {tab.label}
+            </Link>
+          );
+        })}
       </div>
 
-      
-
-      {/* 🔹 Tabs */}
-      <div className="overflow-x-auto scrollbar-hide">
-        <div className="flex gap-4 flex-nowrap px-2 border-b border-gray-200">
-          {tabs.map((tab) => {
-    
-            const isActive = pathname === tab.path;
-
-            return (
-              <Link
-                key={tab.path}
-                to={tab.path}
-                className={`shrink-0 px-4 py-2 font-medium ${
-                  isActive
-                    ? "text-blue-700 border-b border-blue-700 "
-                    : "text-gray-600 bg-gray-100 hover:bg-gray-200"
-                }`}
-              >
-                {tab.label}
-              </Link>
-            );
-          })}
-        </div>
-      </div>
-
-      
       <div className="mt-6">
-        <Outlet />
+        <Outlet /> 
       </div>
     </div>
   );
 }
 
 export default AppointmentLayout;
+
 
 

@@ -1,30 +1,35 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// Landing Page
+import LandingPage from "./Landingpage/LandingPage";
+
+// App Layout & Pages
+import Layout from "./Layout";
 import Home from "./pages/Home";
 
-import Appointments from "./pages/Appointments/Appointments";
-import Profile from "./pages/Profile";
-import Layout from "./Layout";
-import Notifications from "./pages/Notifications";
-import Settings from "./pages/Settings";
-import Billings from "./pages/Billings";
-import Reminders from "./pages/Reminders";
-import HealthTips from "./pages/HealthTips";
+// Appointments
+import AppointmentLayout from "./pages/Appointments/AppointmentLayout";
 import BookAppointment from "./pages/Appointments/BookAppointment";
 import UpcomingAppointments from "./pages/Appointments/UpcomingAppointments";
 import PastAppointments from "./pages/Appointments/PastAppointments";
 import ConfirmedAppointments from "./pages/Appointments/ConfirmedAppointments";
 import CancelledAppointments from "./pages/Appointments/CancelledAppointments";
-import AppointmentLayout from "./pages/Appointments/AppointmentLayout";
 
-import Prescriptions from "./pages/Prescriptions/Prescriptions";
-import PastVisits from "./pages/History/PastVisits";
-import LabResults from "./pages/History/LabResults";
-import Immunizations from "./pages/History/Immunizations";
-import Allergies from "./pages/History/Allergies";
+// Medical History
 import HistoryLayout from "./pages/History/HistoryLayout";
-import LandingPage from "./Landingpage/LandingPage";
+import PastVisits from "./pages/History/PastVisits";
+import Immunizations from "./pages/History/Immunizations";
+import LabResults from "./pages/History/LabResults";
+import Allergies from "./pages/History/Allergies";
 
-
+// Other Pages
+import Prescriptions from "./pages/Prescriptions/Prescriptions";
+import Profile from "./pages/Profile";
+import Notifications from "./pages/Notifications";
+import Settings from "./pages/Settings";
+import Billings from "./pages/Billings";
+import Reminders from "./pages/Reminders";
+import HealthTips from "./pages/HealthTips";
 
 function App() {
   return (
@@ -47,7 +52,7 @@ function App() {
             <Route path="cancelled" element={<CancelledAppointments />} />
           </Route>
 
-          {/* History */}
+          {/* Medical History */}
           <Route path="medicalhistory" element={<HistoryLayout />}>
             <Route index element={<PastVisits />} />
             <Route path="immunizations" element={<Immunizations />} />
@@ -55,6 +60,7 @@ function App() {
             <Route path="allergies" element={<Allergies />} />
           </Route>
 
+          {/* Other Pages */}
           <Route path="prescription" element={<Prescriptions />} />
           <Route path="profile" element={<Profile />} />
           <Route path="notifications" element={<Notifications />} />
@@ -70,4 +76,5 @@ function App() {
 }
 
 export default App;
+
 

@@ -81,6 +81,7 @@ function NavBar() {
 
             <NavLink
               to="/app"
+              end 
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
                 `${linkStyles} ${isActive ? activeStyles : inactiveStyles}`
@@ -91,7 +92,7 @@ function NavBar() {
             </NavLink>
 
             <NavLink
-              to="/appointments"
+              to="/app/appointments"
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
                 `${linkStyles} ${isActive ? activeStyles : inactiveStyles}`
@@ -102,7 +103,7 @@ function NavBar() {
             </NavLink>
 
             <NavLink
-              to="/prescription"
+              to="/app/prescription"
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
                 `${linkStyles} ${isActive ? activeStyles : inactiveStyles}`
@@ -113,7 +114,7 @@ function NavBar() {
             </NavLink>
 
             <NavLink
-              to="/medicalhistory"
+              to="/app/medicalhistory"
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
                 `${linkStyles} ${isActive ? activeStyles : inactiveStyles}`
@@ -124,7 +125,7 @@ function NavBar() {
             </NavLink>
 
             <NavLink
-              to="/profile"
+              to="/app/profile"
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
                 `${linkStyles} ${isActive ? activeStyles : inactiveStyles}`
@@ -135,7 +136,7 @@ function NavBar() {
             </NavLink>
 
             <NavLink
-              to="/notifications"
+              to="/app/notifications"
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
                 `${linkStyles} ${isActive ? activeStyles : inactiveStyles}`
@@ -146,7 +147,7 @@ function NavBar() {
             </NavLink>
 
             <NavLink
-              to="/billings"
+              to="/app/billings"
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
                 `${linkStyles} ${isActive ? activeStyles : inactiveStyles}`
@@ -157,7 +158,7 @@ function NavBar() {
             </NavLink>
 
             <NavLink
-              to="/healthtips"
+              to="/app/healthtips"
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
                 `${linkStyles} ${isActive ? activeStyles : inactiveStyles}`
@@ -168,7 +169,7 @@ function NavBar() {
             </NavLink>
 
             <NavLink
-              to="/reminders"
+              to="/app/reminders"
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
                 `${linkStyles} ${isActive ? activeStyles : inactiveStyles}`
@@ -179,7 +180,7 @@ function NavBar() {
             </NavLink>
 
             <NavLink
-              to="/settings"
+              to="/app/settings"
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
                 `${linkStyles} ${isActive ? activeStyles : inactiveStyles}`
