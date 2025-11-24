@@ -34,14 +34,14 @@ export default function Home() {
     <section className="min-h-screen w-full">
       <div className=" w-full">
 
-        <div className="pl-4">
-          <h1 className="text-xl font-bold text-blue-900 mt-16 lg:mt-8">Welcome to MediPortal!</h1>
+        <div className="px-4">
+          <h1 className="text-xl font-bold text-blue-900 mt-24 lg:mt-8">Welcome to MediPortal!</h1>
             <p className=' text-gray-600 mb-4'>Here's what's happening with your health today.</p>
         </div>
         
 
         {/* Appointments */}
-        <div className="mt-6 pl-4 w-full gap-6">
+        <div className="mt-6 p-4 w-full gap-6">
           <div className="bg-white w-full p-4 sm:p-6 rounded-lg shadow-md">
             <h2 className="text-lg font-semibold">Upcoming Appointments</h2>
             <p className="text-gray-600 text-[15px] sm:text-[16px]">

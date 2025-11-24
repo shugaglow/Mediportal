@@ -3,7 +3,7 @@ import CheckupCard from './CheckupCard'
 
 function PastVisits() {
   return (
-    <div className='pl-4'>
+    <div className='px-4'>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <CheckupCard
             title="Annual Skin Checkup"

@@ -3,9 +3,9 @@ import { HiOutlineUpload, HiOutlineUser } from "react-icons/hi";
 
 export default function Profile() {
   return (
-    <div className="w-full pl-4">
+    <div className="w-full px-4">
       {/* Header */}
-      <h1 className="text-xl font-bold text-blue-900 lg:mt-8 mt-16">Profile Information</h1>
+      <h1 className="text-xl font-bold text-blue-900 lg:mt-8 mt-24">Profile Information</h1>
       <p className="text-gray-600 mb-6">
         Manage and update your personal details.
       </p>

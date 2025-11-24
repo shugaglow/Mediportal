@@ -4,7 +4,7 @@ import ConfirmedCard from './ConfirmedCard'
 
 function ConfirmedAppointments() {
   return (
-    <div className='p-4 bg-white'>
+    <div className='p-4 rounded-md bg-white'>
 
         <div>
             <h2 className='text-lg md:text-xl font-semibold'>Confirmed Appointments</h2>

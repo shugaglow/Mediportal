@@ -18,10 +18,10 @@ export default function Settings() {
   const [locationAccess, setLocationAccess] = useState(true);
 
   return (
-    <div className="w-full pl-4">
+    <div className="w-full px-4">
       {/* Header */}
       <div>
-        <h1 className="text-xl font-bold text-blue-900 lg:mt-8 mt-16">
+        <h1 className="text-xl font-bold text-blue-900 lg:mt-8 mt-24">
           Settings
         </h1>
         <p className="text-gray-600">

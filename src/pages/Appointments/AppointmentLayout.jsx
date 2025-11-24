@@ -12,13 +12,13 @@ function AppointmentLayout() {
   ];
 
   return (
-    <div className="w-full pl-4">
+    <div className="w-full px-4">
 
       {/* 🔹 Header */}
       <div className="w-full">
 
          <div>
-            <h2 className='text-xl font-bold text-blue-900 mt-16 lg:mt-8'>Appointments</h2>
+            <h2 className='text-xl font-bold text-blue-900 mt-24 lg:mt-8'>Appointments</h2>
             <p className=' text-gray-600 mb-4'>Book your next appointment in just a few clicks.</p>
         </div>
       </div>

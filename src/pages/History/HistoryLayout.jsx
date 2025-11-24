@@ -10,16 +10,16 @@ function HistoryLayout() {
     <div className="w-full">
 
       {/* 🔹 Header */}
-       <div className=' w-full pl-4 flex flex-col lg:flex-row justify-between'>
+       <div className=' w-full px-4 flex flex-col lg:flex-row justify-between'>
 
             <div>
-            <h2 className='text-xl font-bold text-blue-900 mt-16 lg:mt-8'>Medical History</h2>
+            <h2 className='text-xl font-bold text-blue-900 mt-24 lg:mt-8'>Medical History</h2>
             <p className='text-sm md:text-lg text-gray-600 mb-6'>Your health journey at a glance and all your records in one place.</p>
         </div>
 
             
 
-            <div className="flex gap-2 mb-8  p-8">
+            <div className="flex gap-2 mb-8  lg:p-8">
             <button className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 text-gray-800 rounded-md hover:bg-gray-100">
                 <HiOutlineUpload size={18} />
                 Upload
@@ -34,7 +34,7 @@ function HistoryLayout() {
       </div>
 
       {/* 🔹 Tabs */}
-      <div className="flex gap-6  pl-4 overflow-x-auto scrollbar-hides">
+      <div className="flex gap-6  px-4 overflow-x-auto scrollbar-hides">
 
         <div className="flex gap-4 flex-nowrap px-2 border-b border-gray-200">
           

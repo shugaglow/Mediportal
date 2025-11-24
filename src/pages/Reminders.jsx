@@ -66,9 +66,9 @@ export default function Reminders() {
   };
 
   return (
-    <div className="w-full pl-4">
+    <div className="w-full px-4">
       {/* Header */}
-      <h1 className="text-xl font-bold text-blue-900 lg:mt-8 mt-16">Reminders</h1>
+      <h1 className="text-xl font-bold text-blue-900 lg:mt-8 mt-24">Reminders</h1>
       <p className="text-gray-600 mt-1">
         Stay on top of your health with smart personalized reminders.
       </p>

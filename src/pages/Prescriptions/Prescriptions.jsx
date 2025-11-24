@@ -7,8 +7,8 @@ function Prescriptions() {
     <div className='w-full'>
 
       
-      <div className='pl-4'>
-            <h2 className='text-xl font-bold text-blue-900 mt-16 lg:mt-8'>Prescription Cards</h2>
+      <div className='px-4'>
+            <h2 className='text-xl font-bold text-blue-900 mt-24 lg:mt-8'>Prescription Cards</h2>
             <p className=' text-gray-600 mb-6'>Keep track of all your medications, so you never miss a dose.</p>
         </div>
 

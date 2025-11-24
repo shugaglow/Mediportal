@@ -4,7 +4,7 @@ import TopComponent from '../../components/TopComponent'
 
 function Immunizations() {
   return (
-    <div className='pl-4'>
+    <div className='px-4'>
         <div className=''>
 
         <div className=''>
