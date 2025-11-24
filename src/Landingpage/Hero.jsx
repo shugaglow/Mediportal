@@ -1,0 +1,55 @@
+import React from "react";
+import hero1 from "../assets/hero2.jpg";
+
+function Hero({ setShowAuth, setTab }) {
+  return (
+    <section
+      id="hero"
+      className="relative w-full min-h-[90vh] flex items-center justify-center px-6 md:px-12 lg:px-24 text-white"
+      style={{
+        backgroundImage: `url(${hero1})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/40"></div>
+
+      {/* Content */}
+      <div className="relative z-10 w-full flex flex-col gap-4 text-left py-20 md:py-0">
+        {/* Small Label */}
+        <p className="bg-white/70 border border-gray-500 text-blue-800 rounded-full px-4 py-1 text-sm md:text-base w-fit">
+          Your health, at your fingertips.
+        </p>
+
+        {/* Heading + Subtext */}
+        <div>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+            Your Complete Digital Health Companion
+          </h1>
+          <p className="mt-2 text-sm sm:text-base md:text-lg text-gray-200">
+            Manage your health easily, from anywhere. Book appointments, track
+            prescriptions, and monitor your medical records effortlessly.
+          </p>
+        </div>
+
+        {/* Button */}
+        <button
+          onClick={() => {
+            setShowAuth(true);
+            setTab("signup");
+          }}
+          className="mt-4 px-6 sm:px-8 py-2 sm:py-3 bg-blue-700 text-white font-medium rounded-lg hover:bg-blue-900 transition-all w-fit"
+        >
+          Get Started
+        </button>
+      </div>
+    </section>
+  );
+}
+
+export default Hero;
+
+
+
+

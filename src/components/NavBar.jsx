@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { HiOutlineClipboardDocumentCheck } from "react-icons/hi2";
+import { NavLink, useNavigate } from "react-router-dom";
 
-import { NavLink } from "react-router-dom";
 import {
   HiOutlineMenu,
   HiOutlineX,
@@ -14,10 +13,20 @@ import {
   HiOutlineCog,
   HiOutlineCreditCard,
   HiOutlineHeart,
+  HiOutlineCheckCircle,
+  HiOutlineLogout
 } from "react-icons/hi";
 
 function NavBar() {
   const [open, setOpen] = useState(false);
+  const [showLogoutModal, setShowLogoutModal] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    setShowLogoutModal(false);
+    navigate("/"); // Go back to landing page
+  };
 
   const linkStyles =
     "flex items-center gap-2 pl-4 pr-12 py-2 rounded-md transition-all";
@@ -25,8 +34,7 @@ function NavBar() {
   const activeStyles =
     "bg-blue-100 text-blue-900 font-semibold border-l-4 border-blue-700";
 
-  const inactiveStyles =
-    "text-blue-950 hover:bg-blue-50";
+  const inactiveStyles = "text-blue-950 hover:bg-blue-50";
 
   return (
     <>
@@ -39,44 +47,40 @@ function NavBar() {
         </button>
       </div>
 
-      {/* BACKDROP FOR MOBILE */}
+      {/* BACKDROP */}
       {open && (
-       <div
-  onClick={() => setOpen(false)}
-  className="lg:hidden fixed inset-0 z-40"
-/>
-
+        <div
+          onClick={() => setOpen(false)}
+          className="lg:hidden fixed inset-0 z-40"
+        />
       )}
 
       {/* SIDEBAR */}
       <div
-        className={`
-          fixed top-0 left-0 h-screen bg-gray-50 flex flex-col
-          border-r border-gray-200 shadow-md transform transition-transform duration-300 z-50
-          ${open ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
-        `}
+        className={`fixed top-0 left-0 h-screen bg-gray-50 flex flex-col border-r 
+        border-gray-200 shadow-md transform transition-transform duration-300 z-50
+        ${open ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}`}
       >
         {/* Logo */}
         <div className="p-8 bg-white border-b border-gray-300 flex justify-between items-center">
-          <NavLink className="text-lg lg:text-xl text-blue-950 font-bold" to="/">
+          <NavLink
+            className="text-lg lg:text-xl text-blue-950 font-bold"
+            to="/"
+          >
             MediPortal
           </NavLink>
 
-          {/* Close button mobile */}
-          <button
-            onClick={() => setOpen(false)}
-            className="lg:hidden text-blue-950"
-          >
-            <HiOutlineX size={24} />
+          <button onClick={() => setOpen(false)} className="lg:hidden">
+            <HiOutlineX size={24} className="text-blue-950" />
           </button>
         </div>
 
-        {/* Nav Items */}
+        {/* LINKS */}
         <header className="px-6 py-2 flex-1 overflow-y-auto">
           <nav className="flex flex-col gap-2">
 
             <NavLink
-              to="/"
+              to="/app"
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
                 `${linkStyles} ${isActive ? activeStyles : inactiveStyles}`
@@ -170,7 +174,7 @@ function NavBar() {
                 `${linkStyles} ${isActive ? activeStyles : inactiveStyles}`
               }
             >
-              <HiOutlineClipboardDocumentCheck size={20} />
+              <HiOutlineCheckCircle size={20} />
               Reminders
             </NavLink>
 
@@ -184,14 +188,54 @@ function NavBar() {
               <HiOutlineCog size={20} />
               Settings
             </NavLink>
+
+            {/* LOGOUT BUTTON */}
+            <button
+              onClick={() => setShowLogoutModal(true)}
+              className="flex items-center gap-2 pl-4 pr-12 py-2 text-red-600 hover:bg-red-50 rounded-md mt-4"
+            >
+              <HiOutlineLogout size={20} />
+              Logout
+            </button>
           </nav>
         </header>
       </div>
+
+      {/* LOGOUT MODAL */}
+      {showLogoutModal && (
+        <div className="fixed inset-0  flex items-center justify-center z-999">
+          <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-lg w-80">
+            <h2 className="text-lg font-semibold text-gray-800 mb-2">
+              Log out?
+            </h2>
+            <p className="text-gray-600 mb-4">
+              Are you sure you want to log out of MediPortal?
+            </p>
+
+            <div className="flex gap-3 justify-end">
+              <button
+                className="px-4 py-2 rounded-md border"
+                onClick={() => setShowLogoutModal(false)}
+              >
+                Cancel
+              </button>
+
+              <button
+                className="px-4 py-2 rounded-md bg-red-600 text-white"
+                onClick={handleLogout}
+              >
+                Log out
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }
 
 export default NavBar;
+
 
 
 
