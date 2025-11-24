@@ -5,7 +5,7 @@ function Hero({ setShowAuth, setTab }) {
   return (
     <section
       id="hero"
-      className="relative w-full min-h-[90vh] flex items-center justify-center px-6 md:px-12 lg:px-24 text-white"
+      className="relative w-full h-screen text-white"
       style={{
         backgroundImage: `url(${hero1})`,
         backgroundSize: "cover",
@@ -15,8 +15,8 @@ function Hero({ setShowAuth, setTab }) {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40"></div>
 
-      {/* Content */}
-      <div className="relative z-10 w-full flex flex-col gap-4 text-left py-20 md:py-0">
+      {/* Content at bottom-left */}
+      <div className="absolute bottom-8 left-8 md:bottom-16 md:left-16 z-10 flex flex-col gap-4 max-w-xl">
         {/* Small Label */}
         <p className="bg-white/70 border border-gray-500 text-blue-800 rounded-full px-4 py-1 text-sm md:text-base w-fit">
           Your health, at your fingertips.
@@ -49,6 +49,7 @@ function Hero({ setShowAuth, setTab }) {
 }
 
 export default Hero;
+
 
 
 
