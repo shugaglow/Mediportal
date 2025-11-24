@@ -1,8 +1,9 @@
-import cta from "../assets/cta5.jpg";
+import React from 'react'
+import cta from '../assets/cta5.jpg';
 
-export default function CTASection() {
+function HeroCTA() {
   return (
-    <section
+        <section
       id="cta"
       className="relative w-full py-48 text-white"
     >
@@ -41,7 +42,7 @@ export default function CTASection() {
 
       </div>
     </section>
-  );
+  )
 }
 
-
+export default HeroCTA

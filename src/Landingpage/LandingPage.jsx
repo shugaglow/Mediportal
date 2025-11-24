@@ -6,8 +6,12 @@ import Hero from "./Hero";
 import Features from "./Features";
 import HowItWorks from "./HowItWorks";
 import Testimonials from "./Testimonials";
-import CTASection from "./CTAsection";
+
 import Footer from "./Footer";
+import HeroCTA from "./HeroCTA";
+
+
+
 
 
 
@@ -28,7 +32,7 @@ export default function LandingPage() {
       <Features />
       <HowItWorks />
       <Testimonials />
-      <CTASection />
+      <HeroCTA/>
       <Footer />
 
       {/* Login/Signup Modal */}
